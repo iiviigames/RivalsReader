@@ -96,7 +96,7 @@ table = Table(show_header=True,header_style="bold magenta")
 
 # Columns
 table.add_column("Asset ID", style="dim", width = 12)
-table.add_column("Asset Name",width=24)
+table.add_column("Asset Name",width=28)
 table.add_column("Asset Type",justify="left",width=16)
 
 # Example Row
@@ -229,7 +229,7 @@ IMPLEMENTED:
     global VALIDATED
     
     #   Steam Common Check
-    if special == SteamCheck1:
+    if special == SteamCheck:
         #   Check the common folder
         ret = validate(STEAMCOMMON)
         if ret:
@@ -385,9 +385,9 @@ VALID KEYS:
                     if content == '0':
                         content += ' (Character)'
                     elif content == '1':
-                        content += '(Buddy)'
+                        content += ' (Buddy)'
                     elif content == '2':
-                        content += '(Stage)'
+                        content += ' (Stage)'
                     else:
                         content = content
                         
@@ -569,6 +569,8 @@ FULL EXAMPLE:
 #   Currently reproduces the content of EXAMPLE 4
 if __name__ == "__main__":
 
+    #   Perform initialization function
+    initialize()
 
     #   Print the contents of the folder
     workshop = list_workshop_items()
@@ -603,44 +605,3 @@ if __name__ == "__main__":
 
     #   Exit
     raise(sys.exit())
-
-
-#   ===========================================================================
-#                                   NOT BEING USED
-#   ===========================================================================
-
-#   Adds rows to the console table
-"""
-def add_rows(keys,data):
-    '''
-Adds rows to the console table
-    '''
-    rows = []
-    #   Create a template for each item
-    template = dict()
-    for i in range(len(keys)):
-        key = keys[i]
-        template[key] = None
-
-    #   Data size and create a row for each
-    size = len(data[1])
-    for i in range(size):
-        rows.append([])
-  
-    #   Loop through data and add to a row
-    for i in range(len(data)):
-        #   Get inner data list
-        current = data[i]
-        #   Set matching key name
-        key = keys[i]
-        #   Loop through the inner list (ie; names, authors)
-        for j in range(len(current)):
-            #   Get the row from the rows dict
-            row = rows[j]
-            #   Store the current data list's content in that key
-            row[key] = current[j]
-
-    #   All rows populated, so go through the row list and add each item toa row
-    #   Loop through keylist and add the row
-"""    
-        
