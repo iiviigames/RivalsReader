@@ -71,7 +71,7 @@ _Log all the name keys obtained from the config to a .txt file._
     #   Loop through the config files in each folder, seeking their 'name' key.
     namelist = iterate_folders(workshop,'name')
     #   Write the the names to a file.
-    #   write_to_file(namelist, 'roa_names.txt',"C:/Users/{YourName}/Desktop")
+    write_to_file(namelist, 'roa_names.txt',"C:/Users/{YourName}/Desktop")
 ```
 
 ###EXAMPLE 4
