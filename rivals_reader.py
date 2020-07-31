@@ -124,7 +124,7 @@ CFG = 'config.ini'
 
 # Rivals of Aether folders
 STEAMCOMMON = "C:/Program Files (x86)/Steam/steamapps/workshop/content"+STEAMID
-STEAMCUSTOM = "E:/SteamLibrary/steamapps/workshop/content/383980"
+STEAMCUSTOM = ""
 CHARFOLDER  = "%APPDATA%/../Local/RivalsofAether//workshop"
 STAGEFOLDER = "%APPDATA%/../Local/RivalsofAether//stages"
 # Valid workshop folder
@@ -132,11 +132,6 @@ VALIDATED = ''
 
 # Initializing Folder Check Macros
 SteamCheck = 999
-
-
-# Rivals of Aether config.ini data
-ROACHAR = {'character': 0}
-['character','buddy','stage'] # char=0,bud=1,stg=2
 
 
 #                                                                      FUNCTIONS
